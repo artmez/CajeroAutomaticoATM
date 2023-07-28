@@ -108,6 +108,7 @@ function ingresaPassword() {
             pantallaSalida.value = "Seleccione una Opción";
             recuadroOpciones.style.visibility = "visible";
             estatus = "opciones";
+            obtieneSaldo();
             return;
         } else {
             console.log(contador);
