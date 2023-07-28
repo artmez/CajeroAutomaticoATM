@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Banco de la Ilusión</title>
+    <link rel="stylesheet" href="./styles/atm.css">
+    <script defer src="./code/atm.js"></script>
+</head>
+<body>
+    <nav>
+        <article>
+            <img src="./images/LogoBank.png" alt="">
+        </article>
+        <article class="nav_right">
+            <p>Bienvenido al</p>
+            <p class="banco">Banco de la Ilusión</p>
+            <div id="fecha"></div>
+        </article>
+    </nav>
+    <main>
+        <section class="container">
+            <article id="left">
+                <aside>
+                    <div id="saldo" class="sub_opciones">
+                        <img src="./images/saldo_icon.svg" alt="Cosulta tu Saldo">
+                        <div>
+                            <p class="titulo">SALDO</p>
+                            <p>Consulta tu Saldo.</p>
+                        </div>
+                    </div>
+                </aside>
+                <aside>
+                    <div id="deposito" class="sub_opciones">
+                        <img src="./images/deposito_icon.svg" alt="Cosulta tu Saldo">
+                        <div>
+                            <p class="titulo">DEPOSITO</p>
+                            <p>Haz un depósito a tu cuenta.</p>
+                        </div>
+                    </div>
+                </aside>
+                <aside>
+                    <div id="retiro" class="sub_opciones">
+                        <img src="./images/retiro_icon.png" alt="Cosulta tu Saldo">
+                        <div>
+                            <p class="titulo">RETIRO</p>
+                            <p>Haz un retiro de tu cuenta.</p>
+                        </div>
+                    </div>
+                </aside>
+            </article>
+            <article id="right">
+                <form id="keypad" name="formato">
+                    <input class="item_calc" id="entrada" type="text" name="respuesta" placeholder="Ingrese su número de cliente:">
+                    <textarea class="item_calc" name="ventana" id="ventana" cols="30" rows="3" placeholder="¡Bienvenido al Banco de la Ilusión!" readonly></textarea>
+                    <input class="calc" type="button" value="1" onclick="keypad.respuesta.value += '1'">
+                    <input class="calc" type="button" value="2" onclick="keypad.respuesta.value += '2'">
+                    <input class="calc" type="button" value="3" onclick="keypad.respuesta.value += '3'">
+                    <input id="cancelar" class="calc" type="button" value="CANCELAR" onclick="">
+                    <input class="calc" type="button" value="4" onclick="keypad.respuesta.value += '4'">
+                    <input class="calc" type="button" value="5" onclick="keypad.respuesta.value += '5'">
+                    <input class="calc" type="button" value="6" onclick="keypad.respuesta.value += '6'">
+                    <input id="corregir" class="calc" type="button" value="CORREGIR" onclick="">
+                    <input class="calc" type="button" value="7" onclick="keypad.respuesta.value += '7'">
+                    <input class="calc" type="button" value="8" onclick="keypad.respuesta.value += '8'">
+                    <input class="calc" type="button" value="9" onclick="keypad.respuesta.value += '9'">
+                    <input itemid="aceptar" class="calc" type="button" id="aceptar"  value="ACEPTAR" onclick="">
+                    <input class="calc" type="button" value="*" onclick="keypad.respuesta.value += '*'">
+                    <input class="calc" type="button" value="0" onclick="keypad.respuesta.value += '0'">
+                    <input class="calc" type="button" value="." onclick="keypad.respuesta.value += '.'">
+                </form>
+            </article>
+            <article id="itemFooter">
+                <p>Datos Usuarios:</p>
+                    <p>Ana: 1234</p>
+                    <p>Pedro: 1111</p>
+                    <p>Verónica: 9999</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
