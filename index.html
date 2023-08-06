@@ -1,82 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido a Banco de la Ilusión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/atm.css">
     <script defer src="./code/atm.js"></script>
 </head>
+
 <body>
-    <nav>
-        <article>
-            <img src="./images/LogoBank.png" alt="">
-        </article>
-        <article class="nav_right">
-            <p>Bienvenido al</p>
-            <p class="banco">Banco de la Ilusión</p>
-            <div id="fecha"></div>
-        </article>
-    </nav>
-    <main>
-        <section class="container">
-            <article id="left">
-                <aside>
-                    <div id="saldo" class="sub_opciones">
-                        <img src="./images/saldo_icon.svg" alt="Cosulta tu Saldo">
-                        <div>
-                            <p class="titulo">SALDO</p>
-                            <p>Consulta tu Saldo.</p>
-                        </div>
+    <div class="container">
+        <div class="row fixed-top" style="background-color: #292929">
+            <div class="col-9">
+                <div class="d-flex m-2 align-items-center">
+                    <div class="pe-2">
+                        <img src="https://ca.slack-edge.com/TE1NJDVGU-U0510R5JK9N-ff91fb654fe7-512" alt="Logo"
+                            width="50" class="rounded">
                     </div>
-                </aside>
-                <aside>
-                    <div id="deposito" class="sub_opciones">
-                        <img src="./images/deposito_icon.svg" alt="Cosulta tu Saldo">
-                        <div>
-                            <p class="titulo">DEPOSITO</p>
-                            <p>Haz un depósito a tu cuenta.</p>
-                        </div>
+                    <div>
+                        <img src="./img/artmezlogo.png" alt="Logo" width="70" class="rounded">
                     </div>
-                </aside>
-                <aside>
-                    <div id="retiro" class="sub_opciones">
-                        <img src="./images/retiro_icon.png" alt="Cosulta tu Saldo">
-                        <div>
-                            <p class="titulo">RETIRO</p>
-                            <p>Haz un retiro de tu cuenta.</p>
-                        </div>
+                </div>
+            </div>
+            <div class="col-3 m-auto">
+                <div class="d-flex  justify-content-end">
+                    <div class="pe-2">
+                        <a href="https://www.linkedin.com/in/arturomeza/">
+                            <img src="./img/logoLinkedin.png" alt="Logo" width="30" class="rounded">
+                        </a>
                     </div>
-                </aside>
-            </article>
-            <article id="right">
-                <form id="keypad" name="formato">
-                    <input class="item_calc" id="entrada" type="text" name="respuesta" placeholder="Ingrese su número de cliente:">
-                    <textarea class="item_calc" name="ventana" id="ventana" cols="30" rows="3" placeholder="¡Bienvenido al Banco de la Ilusión!" readonly></textarea>
-                    <input class="calc" type="button" value="1" onclick="keypad.respuesta.value += '1'">
-                    <input class="calc" type="button" value="2" onclick="keypad.respuesta.value += '2'">
-                    <input class="calc" type="button" value="3" onclick="keypad.respuesta.value += '3'">
-                    <input id="cancelar" class="calc" type="button" value="CANCELAR" onclick="">
-                    <input class="calc" type="button" value="4" onclick="keypad.respuesta.value += '4'">
-                    <input class="calc" type="button" value="5" onclick="keypad.respuesta.value += '5'">
-                    <input class="calc" type="button" value="6" onclick="keypad.respuesta.value += '6'">
-                    <input id="corregir" class="calc" type="button" value="CORREGIR" onclick="">
-                    <input class="calc" type="button" value="7" onclick="keypad.respuesta.value += '7'">
-                    <input class="calc" type="button" value="8" onclick="keypad.respuesta.value += '8'">
-                    <input class="calc" type="button" value="9" onclick="keypad.respuesta.value += '9'">
-                    <input itemid="aceptar" class="calc" type="button" id="aceptar"  value="ACEPTAR" onclick="">
-                    <input class="calc" type="button" value="*" onclick="keypad.respuesta.value += '*'">
-                    <input class="calc" type="button" value="0" onclick="keypad.respuesta.value += '0'">
-                    <input class="calc" type="button" value="." onclick="keypad.respuesta.value += '.'">
-                </form>
-            </article>
-            <article id="itemFooter">
-                <p>Datos Usuarios:</p>
-                    <p>Ana: 1234</p>
-                    <p>Pedro: 1111</p>
-                    <p>Verónica: 9999</p>
-            </article>
-        </section>
-    </main>
+                    <div class="pe-2">
+                        <a href="mailto:arturomezaservin@icloud.com">
+                            <img src="./img/logoEmail.png" alt="Logo" width="30" class="rounded">
+                        </a>
+                    </div>
+                    <div class="pe-2">
+                        <a href="https://github.com/artmez">
+                            <img src="./img/logoGithub.png" alt="Logo" width="30" class="rounded">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div
+                class="mt-5 pt-3 position-fixed start-0 col d-flex flex-row justify-content-between align-items-center bg-white">
+                <article>
+                    <img class="navImg" src="./images/LogoBank.png" alt="">
+                </article>
+                <article class="nav_right">
+                    <p>Bienvenido al</p>
+                    <p class="banco">Banco de la Ilusión</p>
+                    <div id="fecha"></div>
+                </article>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex flex-row justify-content-center">
+                <section class="container1">
+                    <article id="left">
+                        <aside>
+                            <div id="saldo" class="sub_opciones">
+                                <img class="imagen" src="./images/saldo_icon.svg" alt="Cosulta tu Saldo">
+                                <div>
+                                    <p class="titulo">SALDO</p>
+                                    <p>Consulta tu Saldo.</p>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside>
+                            <div id="deposito" class="sub_opciones">
+                                <img class="imagen" src="./images/deposito_icon.svg" alt="Cosulta tu Saldo">
+                                <div>
+                                    <p class="titulo">DEPOSITO</p>
+                                    <p>Haz un depósito a tu cuenta.</p>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside>
+                            <div id="retiro" class="sub_opciones">
+                                <img class="imagen" src="./images/retiro_icon.png" alt="Cosulta tu Saldo">
+                                <div>
+                                    <p class="titulo">RETIRO</p>
+                                    <p>Haz un retiro de tu cuenta.</p>
+                                </div>
+                            </div>
+                        </aside>
+                    </article>
+                    <article id="right">
+                        <form id="keypad" name="formato">
+                            <input class="item_calc" id="entrada" type="text" name="respuesta"
+                                placeholder="Ingrese su número de cliente:">
+                            <textarea class="item_calc" name="ventana" id="ventana" cols="30" rows="3"
+                                placeholder="¡Bienvenido al Banco de la Ilusión!" readonly></textarea>
+                            <input class="calc" type="button" value="1" onclick="keypad.respuesta.value += '1'">
+                            <input class="calc" type="button" value="2" onclick="keypad.respuesta.value += '2'">
+                            <input class="calc" type="button" value="3" onclick="keypad.respuesta.value += '3'">
+                            <input id="cancelar" class="calc" type="button" value="CANCELAR" onclick="">
+                            <input class="calc" type="button" value="4" onclick="keypad.respuesta.value += '4'">
+                            <input class="calc" type="button" value="5" onclick="keypad.respuesta.value += '5'">
+                            <input class="calc" type="button" value="6" onclick="keypad.respuesta.value += '6'">
+                            <input id="corregir" class="calc" type="button" value="CORREGIR" onclick="">
+                            <input class="calc" type="button" value="7" onclick="keypad.respuesta.value += '7'">
+                            <input class="calc" type="button" value="8" onclick="keypad.respuesta.value += '8'">
+                            <input class="calc" type="button" value="9" onclick="keypad.respuesta.value += '9'">
+                            <input itemid="aceptar" class="calc" type="button" id="aceptar" value="ACEPTAR" onclick="">
+                            <input class="calc" type="button" value="*" onclick="keypad.respuesta.value += '*'">
+                            <input class="calc" type="button" value="0" onclick="keypad.respuesta.value += '0'">
+                            <input class="calc" type="button" value="." onclick="keypad.respuesta.value += '.'">
+                        </form>
+                    </article>
+                    <article id="itemFooter">
+                        <p>Datos Usuarios:</p>
+                        <p>Ana: 1234</p>
+                        <p>Pedro: 1111</p>
+                        <p>Verónica: 9999</p>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
